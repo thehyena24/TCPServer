@@ -12,7 +12,6 @@
 #include <queue>
 using namespace std;
 
-#define maxCon 100
 #define SOCKERROR (-1)
 #define THREADPOOL 20
 
@@ -61,7 +60,7 @@ int main(int argc, char ** argv)
   int server_sock = check(socket(AF_INET, SOCK_STREAM, 0), "Socket faild to exist");
   int bindStatus = check(bind(server_sock, (SA *) &server_addr, sizeof(server_addr)), "Error binding socket to local address");
 
-  check(listen(server_sock, maxCon),"Listening failed");
+  check(listen(server_sock, 100),"Listening failed");
 
   while(true)
   {

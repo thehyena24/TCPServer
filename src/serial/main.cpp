@@ -62,7 +62,7 @@ int main(int argc, char ** argv)
 
   while(true)
   {
-    listen(server_socket, 5);
+    listen(server_socket, 100);
 
     int client_socket = accept(server_socket, NULL, NULL);
 
