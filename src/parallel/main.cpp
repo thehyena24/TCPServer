@@ -89,14 +89,21 @@ void* thread_function(void*)
 
     if(clients.empty())
     {
-      pthread_cond_wait(&cond_var, &mutex);
+      pthread_cond_wait(&cond_var,&mutex);
+      pclient = clients.front();
+      clients.pop();
+    }
+
+    else
+    {
       pclient = clients.front();
       clients.pop();
     }
 
     pthread_mutex_unlock(&mutex);
     
-    handle_connection(pclient);
+    if(pclient > 0)
+      handle_connection(pclient);
   }
 }
 
