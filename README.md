@@ -1,7 +1,7 @@
 # Multithreaded TCP Server 
 
-Name : Ganesh Mayya K
-SRN : PES1UG21CS198
+### Name : Ganesh Mayya K
+### SRN : PES1UG21CS198
 
 HP Assignement: PThreads
 
