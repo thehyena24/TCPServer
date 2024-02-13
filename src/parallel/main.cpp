@@ -13,7 +13,7 @@
 using namespace std;
 
 #define SOCKERROR (-1)
-#define THREADPOOL 20
+#define THREADPOOL 100
 
 typedef struct sockaddr_in SA_IN;
 typedef struct sockaddr SA;
