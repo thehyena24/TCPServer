@@ -3,7 +3,7 @@
 
 # Multithreaded TCP Server 
 
-## HP Assignement: PThreads
+HP Assignement: PThreads
 
 Build a multi-threaded server in C++, make use of PThreads for parallel programming.
 
