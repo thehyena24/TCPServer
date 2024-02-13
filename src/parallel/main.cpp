@@ -58,6 +58,8 @@ int main(int argc, char ** argv)
   }
 
   int server_sock = check(socket(AF_INET, SOCK_STREAM, 0), "Socket faild to exist");
+  int reuse = 1;
+  int reuseSock = check(setsockopt(server_sock,SOL_SOCKET,SO_REUSEADDR,&reuse,sizeof(reuse)),"Setsockopt failed");
   int bindStatus = check(bind(server_sock, (SA *) &server_addr, sizeof(server_addr)), "Error binding socket to local address");
 
   check(listen(server_sock, 100),"Listening failed");
